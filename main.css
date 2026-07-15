@@ -14,9 +14,7 @@ body {
     font-family: sans-serif;
     -webkit-font-smoothing: antialiased;
 }
- @media (max-width: 1024px ){
-    .row{ grid-template-columns: 1fr; }
-  }
+
 
 .wrap {
     max-width: 1180px;
@@ -34,10 +32,24 @@ body {
     
 }
 
-.row{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* Planshet: 2 ustun */
+@media (max-width: 1024px) {
+    .row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Telefon: 1 ustun */
+@media (max-width: 640px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
 }
 
 .card {
